@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Website</title>
+    <style>
+        /* CSS styles for page content */
+        .page {
+            display: none; /* Hide all pages by default */
+        }
+        .page.active {
+            display: block; /* Show active page */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page content -->
+    <div id="home" class="page active">
+        <h2>Home</h2>
+        <p>Welcome to the Home Page</p>
+    </div>
+
+    <div id="about" class="page">
+        <h2>About</h2>
+        <p>About Us...</p>
+    </div>
+
+    <div id="contact" class="page">
+        <h2>Contact</h2>
+        <p>Contact Information...</p>
+    </div>
+
+    <!-- JavaScript for handling page navigation -->
+    <script>
+        // Function to show selected page and hide others
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            var selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+        }
+
+        // Event listener for navigation links
+        document.querySelectorAll('nav a').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                var pageId = this.getAttribute('href').substring(1); // Remove the # from href
+                showPage(pageId); // Show selected page
+                event.preventDefault(); // Prevent default anchor behavior
+            });
+        });
+
+        // Show the initial page based on URL hash
+        window.onload = function() {
+            var hash = window.location.hash.substring(1); // Get hash from URL
+            if (hash) {
+                showPage(hash); // Show page based on hash
+            }
+        };
+    </script>
+</body>
+</html>
