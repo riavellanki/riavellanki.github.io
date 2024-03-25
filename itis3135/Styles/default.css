@@ -42,3 +42,8 @@ figure{
     text-align: center;
     font-style: italic;
 }
+
+.left-aligned {
+    text-align: left;
+}
+
