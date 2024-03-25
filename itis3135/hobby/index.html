@@ -2,78 +2,155 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Page Website</title>
+    <title>Hobby Site</title>
+    <base href="/hobby/">
     <style>
-        /* CSS styles for page content */
-        .page {
-            display: none; /* Hide all pages by default */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-        .page.active {
-            display: block; /* Show active page */
+
+        header {
+            background-color: #4682b4;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem 0;
+            background-color: #4682b4;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            display: none;
+            padding: 2rem;
+            background-color: #fff;
+            margin: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #4682b4;
+        }
+
+        figure {
+            margin: 0 auto;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Page content -->
-    <div id="home" class="page active">
+<header>
+    <h1>Hobby Site</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showPage('what')">Home</a>
+    <a href="#" onclick="showPage('who')">About Me</a>
+    <a href="#" onclick="showPage('when')">Best Times</a>
+    <a href="#" onclick="showPage('where')">Best Locations</a>
+    <a href="#" onclick="showPage('how')">How</a>
+    <a href="#" onclick="showPage('why')">Why</a>
+</nav>
+
+<main>
+    <section id="what" class="active">
         <h2>Home</h2>
-        <p>Welcome to the Home Page</p>
-    </div>
+        <h3>Welcome to our hobby site!</h3>
+        <p>This hobby is about...</p>
+        <figure>
+            <img src="ai_generated_image_1.jpg" alt="AI Generated Image 1">
+            <figcaption>AI-Image: Generated based on a prompt about hobby exploration.</figcaption>
+            <p><em>Prompt: Create an image depicting exploration and discovery in a hobby setting.</em></p>
+        </figure>
+    </section>
 
-    <div id="about" class="page">
-        <h2>About</h2>
-        <p>About Us...</p>
-    </div>
+    <section id="who">
+        <h2>About Me</h2>
+        <h3>Meet the Team</h3>
+        <p>We are passionate individuals who...</p>
+        <figure>
+            <img src="ai_generated_image_2.jpg" alt="AI Generated Image 2">
+            <figcaption>AI-Image: Depicts hobby enthusiasts.</figcaption>
+            <p><em>Prompt: Generate an image showing enthusiastic hobbyists.</em></p>
+        </figure>
+    </section>
 
-    <div id="contact" class="page">
-        <h2>Contact</h2>
-        <p>Contact Information...</p>
-    </div>
+    <section id="when">
+        <h2>Best Times</h2>
+        <h3>Seasonal Highlights</h3>
+        <p>The best times for this hobby are...</p>
+        <figure>
+            <img src="ai_generated_image_3.jpg" alt="AI Generated Image 3">
+            <figcaption>AI-Image: Illustrates seasonal highlights in the hobby.</figcaption>
+            <p><em>Prompt: Create an image showing seasonal changes relevant to the hobby.</em></p>
+        </figure>
+    </section>
 
-    <!-- JavaScript for handling page navigation -->
-    <script>
-        // Function to show selected page and hide others
-        function showPage(pageId) {
-            // Hide all pages
-            var pages = document.querySelectorAll('.page');
-            pages.forEach(function(page) {
-                page.classList.remove('active');
-            });
+    <section id="where">
+        <h2>Best Locations</h2>
+        <h3>Top Destinations</h3>
+        <p>The best locations for this hobby include...</p>
+        <figure>
+            <img src="ai_generated_image_4.jpg" alt="AI Generated Image 4">
+            <figcaption>AI-Image: Showcasing top hobby destinations.</figcaption>
+            <p><em>Prompt: Generate an image highlighting popular hobby destinations.</em></p>
+        </figure>
+    </section>
 
-            // Show selected page
-            var selectedPage = document.getElementById(pageId);
-            if (selectedPage) {
-                selectedPage.classList.add('active');
+    <section id="how">
+        <h2>How</h2>
+        <h3>Getting Started</h3>
+        <p>To start with this hobby, you need...</p>
+        <figure>
+            <img src="ai_generated_image_5.jpg" alt="AI Generated Image 5">
+            <figcaption>AI-Image: Demonstrating the initial steps of the hobby.</figcaption>
+            <p><em>Prompt: Create an image illustrating the beginner steps of the hobby.</em></p>
+        </figure>
+    </section>
+
+    <section id="why">
+        <h2>Why</h2>
+        <h3>Benefits of the Hobby</h3>
+        <p>This hobby offers numerous benefits such as...</p>
+        <figure>
+            <img src="ai_generated_image_6.jpg" alt="AI Generated Image 6">
+            <figcaption>AI-Image: Highlighting the benefits of the hobby.</figcaption>
+            <p><em>Prompt: Generate an image showcasing the positive impacts of the hobby.</em></p>
+        </figure>
+    </section>
+</main>
+
+<script>
+    function showPage(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
             }
-        }
-
-        // Event listener for navigation links
-        document.querySelectorAll('nav a').forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                var pageId = this.getAttribute('href').substring(1); // Remove the # from href
-                showPage(pageId); // Show selected page
-                event.preventDefault(); // Prevent default anchor behavior
-            });
         });
+    }
+</script>
 
-        // Show the initial page based on URL hash
-        window.onload = function() {
-            var hash = window.location.hash.substring(1); // Get hash from URL
-            if (hash) {
-                showPage(hash); // Show page based on hash
-            }
-        };
-    </script>
 </body>
 </html>
