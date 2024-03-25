@@ -6,7 +6,7 @@
     <title>Hobby Site</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background-color: #f0f0f0;
             color: #333;
             margin: 0;
@@ -15,7 +15,7 @@
         }
 
         header {
-            background-color: #4682b4;
+            background-color: #57b446;
             color: #fff;
             padding: 1rem;
             text-align: center;
@@ -58,16 +58,16 @@
 <body>
 
 <header>
-    <h1>Hobby Site</h1>
+    <h1>Badminton</h1>
 </header>
 
 <nav>
-    <a href="#" onclick="showPage('what')">Home</a>
-    <a href="#" onclick="showPage('who')">About Me</a>
-    <a href="#" onclick="showPage('when')">Best Times</a>
-    <a href="#" onclick="showPage('where')">Best Locations</a>
-    <a href="#" onclick="showPage('how')">How</a>
-    <a href="#" onclick="showPage('why')">Why</a>
+    <a href="What" onclick="showPage('what')">Home</a>
+    <a href="Who" onclick="showPage('who')">About Me</a>
+    <a href="When" onclick="showPage('when')">Best Times</a>
+    <a href="Where" onclick="showPage('where')">Best Locations</a>
+    <a href="How" onclick="showPage('how')">How</a>
+    <a href="Why" onclick="showPage('why')">Why</a>
 </nav>
 
 <main>
@@ -137,6 +137,35 @@
         </figure>
     </section>
 </main>
+
+<footer>
+    <nav>
+        <a href="https://webpages.uncc.edu/rvellan1/">Charlotte.edu</a>
+        ||
+        <a href="https://github.com/riaVellanki/riavellanki.github.io">Github</a>
+        ||
+        <a href="https://riavellanki.github.io/itis3135">Github.io</a>
+        ||
+        <a href="https://www.freecodecamp.org/ria_vellanki">freeCodeCamp</a>
+        ||
+        <a href="https://www.codecademy.com/profiles/ria_vellanki">Codecademy</a>
+        ||
+        <a href="http://www.linkedin.com/in/ria-vellanki-b77a41257">LinkedIn</a>
+
+    </nav>   
+    <p>Page Built by <a href="vellankitech.com/">Vellanki Technology </a>&copy; 2024 </p> 
+    
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+     <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+     <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+      </a>
+</footer>
+<script>
+    document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+         document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+ </script>
 
 <script>
     function showPage(sectionId) {
