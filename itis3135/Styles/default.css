@@ -20,13 +20,13 @@ a:hover {
 
 main {
     text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 h1 {
     display: block;
-    font-size: 4em;
+    font-size: 3em;
     margin-block-start: 0.67em;
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
