@@ -1,11 +1,10 @@
-/* Resetting default browser styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -15,7 +14,7 @@ body {
     padding: 0;
 }
 
-/* Header styles */
+
 header {
     background-color: #333;
     color: #fff;
@@ -27,7 +26,7 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* Navigation styles */
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -46,4 +45,15 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ccc;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
