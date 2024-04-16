@@ -8,16 +8,16 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #e9eba0;
+    color: #060606;
     margin: 0;
     padding: 0;
 }
 
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #6bbddf;
+    color: rgb(236, 171, 118);
     padding: 20px;
     text-align: center;
 }
@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ccc;
+    color: rgb(179, 245, 171);
 }
 
 /* Footer styles */
