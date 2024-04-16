@@ -17,7 +17,7 @@ body {
 
 header {
     background-color: #6bbddf;
-    color: rgb(236, 171, 118);
+    color: rgb(244, 210, 183);
     padding: 20px;
     text-align: center;
 }
@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 /* Footer styles */
 footer {
-    background-color: #333;
+    background-color: #6bbddf;
     color: #fff;
     padding: 20px;
     text-align: center;
